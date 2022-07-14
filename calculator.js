@@ -20,17 +20,17 @@ function del(){
 
 //to calulate the arithmeic values
 function display(val){
-    //  if(result.value>=1 && operator.length>=1 && firstNum.length>=1 && seconNum.length>=1){
-    //     console.log('hello')
-    //     result.val=''
-    //     firstNum=val;
-    //     result.value+=val;
-    //     console.log(firstNum)
-    // }
-    if((val >= 0 && val !='-' && val != '+' && val != '*' && val != '/' && val != '%') && (operator.length==0 )){
+    if(firstNum.length>=1 && val !='-' && val != '+' && val != '*' && val != '/' && val !='%' && operator.length==0 && seconNum.length>=1){
+        seconNum='';
+        firstNum=val;
+        result.value=firstNum;
+        console.log ('hero')
+        console.log (firstNum)
+    }
+    else if((val >= 0 && val !='-' && val != '+' && val != '*' && val != '/' && val != '%') && (operator.length==0)){
         console.log("this is first number");
-        result.value=''
         firstNum+=val;
+        result.value=''
         result.value+=firstNum;
         console.log(firstNum)
     }
@@ -38,9 +38,10 @@ function display(val){
         console.log("this is operator")
         operator=val;
         result.value+=val;
+        seconNum=''
         console.log(operator)
     }
-    else if (operator.length==1 && firstNum.length >=1){
+    else if (operator.length==1 && firstNum.length >=0){
         console.log('this is second number')
         seconNum+=val;
         result.value+=val;
@@ -71,7 +72,6 @@ function calculate(){
         console.log (output)
         result.value = output;
         firstNum=result.value;
-        seconNum=0;
         operator=''
     }
     else if(operator=='-'){
@@ -79,7 +79,6 @@ function calculate(){
         console.log (output)
         result.value = output;
         firstNum=result.value;
-        seconNum=0;
         operator=''
     }
     else if (operator=='*'){
@@ -87,7 +86,6 @@ function calculate(){
         console.log(output);
         result.value=output
         firstNum=result.value;
-        seconNum=0;
         operator=''
     }
     else if (operator=='/'){
@@ -95,7 +93,6 @@ function calculate(){
         console.log(output)
         result.value = output;
         firstNum=result.value;
-        seconNum=0;
         operator=''
     }
     else{
@@ -103,7 +100,6 @@ function calculate(){
         console.log(output);
         result.value = output;
         firstNum=result.value;
-        seconNum=0;
         operator=''
     }
 }
