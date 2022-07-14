@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <div class="container">
+        <div class="result">
+            <input type="text" placeholder="0" id="result" disabled>
+        </div>
+
+        <div class="buttons">
+            <input type="button" value="AC" class="ac" onclick="clearscreen()">
+            <input type="button" value="MC" class="ac" onclick="del()">
+            <input type="button" value="%" class="ac btn" onclick="display('%')">
+            <input type="button" value="/" class="ac btn" onclick="display('/')">
+            <input type="button" value="7" class="pk btn" onclick="display('7')">
+            <input type="button" value="8" class="pk btn" onclick="display('8')">
+            <input type="button" value="9" class="pk btn" onclick="display('9')">
+            <input type="button" value="*" class="ac btn" onclick="display('*')">
+            <input type="button" value="4" class="pk btn" onclick="display('4')">
+            <input type="button" value="5" class="pk btn" onclick="display('5')">
+            <input type="button" value="6" class="pk btn" onclick="display('6')">
+            <input type="button" value="-" class="ac btn" onclick="display('-')">
+            <input type="button" value="1" class="pk btn" onclick="display('1')">
+            <input type="button" value="2" class="pk btn" onclick="display('2')">
+            <input type="button" value="3" class="pk btn" onclick="display('3')">
+            <input type="button" value="+" class="ac btn" onclick="display('+')">
+            <input type="button" value="0" class="zero pk btn" onclick="display('0')">
+            <input type="button" value="." class="pk btn" onclick="display('.')">
+            <input type="button" value="=" class="ez" onclick="calculate()">
+        </div>
+    </div>
+    <!-- <script src="./calc.js"></script> -->
+    <script src="./calculator.js"></script>
+</body>
+</html>
